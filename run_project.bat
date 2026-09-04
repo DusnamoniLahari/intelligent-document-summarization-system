@@ -1,0 +1,6 @@
+@echo off
+echo Starting Flask backend...
+start "Flask Backend" cmd /k "python -m backend.app"
+timeout /t 3 /nobreak >nul
+echo Starting Streamlit frontend...
+streamlit run app.py
